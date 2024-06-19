@@ -9,7 +9,7 @@ Sou um programador Front End, atualmente estou aprendendo e criando projetos com
 ### Redes Sociais:
 
 <a href="https://www.instagram.com/samueloripes_?igsh=OWd2emZ6cG4yZ2Fh" target="_blanck"><img src="https://freepngimg.com/download/logo/69768-logo-computer-layout-instagram-icons-png-file-hd.png" width="30px"></a>
-<a href="https://www.linkedin.com/in/samuel-victor-moreira-oripes-446504296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blanck"><img src="https://aliciavalero.com/wp-content/uploads/2020/11/logo-Linkedin.png" width="50px"></a>
+<a href="www.linkedin.com/in/samuel-oripes" target="_blanck"><img src="https://aliciavalero.com/wp-content/uploads/2020/11/logo-Linkedin.png" width="50px"></a>
 <br>
 <br>
 <br>
