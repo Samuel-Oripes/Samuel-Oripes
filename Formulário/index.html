@@ -9,48 +9,51 @@
 <body>
     <div class="div-formulario">
         <h1>Fale Conosco</h1>
-        <div>
-            <label>
-                Nome
-                <br>
-                <input type="text">
-            </label>
+        <div class="div-input-pareado">
+            <div class="div-input-nomes">
+                <label>
+                    Nome <span class="obrigatorio">*</span>
+                    <br>
+                    <input type="text" class="inputs">
+                </label>
+            </div>
+            <div class="div-input-nomes">
+                <label>
+                    Sobrenome <span class="obrigatorio">*</span>
+                    <br>
+                    <input type="text" class="inputs">
+                </label>
+            </div>
         </div>
         <div>
             <label>
-                Sobrenome
+                Email <span class="obrigatorio">*</span>
                 <br>
-                <input type="text">
+                <input type="text" class="input-email">
             </label>
-        </div>
         <div>
             <label>
-                Email
-                <br>
-                <input type="text">
-            </label>
-        </div>
-        <div>
-            <label>
-                Tipo de consulta
-                <div class="div-input-selecionar">
-                    <input type="radio" class="input-selecionar"> Inquérito geral
+                Tipo de consulta <span class="obrigatorio">*</span>
+                <div class="div-input-pareado">
+                    <label class="div-input-selecionar">
+                            <input type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Inquérito geral</span>
+                    </label>
+                    <label class="div-input-selecionar">
+                        <input type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Solicitar suporte</span>
+                    </label>
                 </div>
-                <div class="div-input-selecionar">
-                    <input type="radio"> Solicitação de suporte
-                </div>
             </label>
         </div>
         <div>
             <label>
-                Mensagem
+                Mensagem <span class="obrigatorio">*</span>
                 <br>
-                <textarea>Digite aqui...</textarea>
+                <textarea></textarea>
             </label>
         </div>
         <div>
-            <label>
-                <input type="checkbox"> Aceito ser contactado pela equipe
+            <label class="label-checkbox">
+                <input type="checkbox" class="input-aceito-contato"> Aceito ser contactado pela equipe
             </label>
         </div>
         <button>Enviar</button>
