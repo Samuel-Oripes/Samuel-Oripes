@@ -229,11 +229,10 @@ button:hover{
     width: 100%;
 }
 
-.paragrafo-alerta-nome.paragrafo-alerta-sobrenome.paragrafo-alerta-email.paragrafo-alerta-consulta.paragrafo-alerta-textarea.paragrafo-alerta-checkbox{
+.paragrafo-alerta-nome,.paragrafo-alerta-sobrenome,.paragrafo-alerta-email,.paragrafo-alerta-consulta,.paragrafo-alerta-textarea,.paragrafo-alerta-checkbox{
     display: none;
     color: #D94747;
 }
-
 
 @media screen and (max-width:800px) and (min-width:581px){
 
