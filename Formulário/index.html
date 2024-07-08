@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
+    <form method="get" action="" onsubmit="enviadoComSucesso()">
         <div class="div-formulario">
-            <h1>Fale Conosco</h1>
+            <h1 class="titulo">Fale Conosco</h1>
             <div id="inputs-nomes" class="div-input-pareado">
                 <div class="div-input-nomes">
                     <label>
@@ -36,21 +36,21 @@
                     <p class="paragrafo-alerta-email">Este campo é obrigatório</p>
                 </label>
             </div>
-            <div>
+            <div id="div-label-consulta">
                 <label>
                     Tipo de consulta <span class="obrigatorio">*</span>
-                    <label class="div-input-pareado" reqired>
+                    <label id="label-consulta" reqired>
                         <label id="label-inquerito" class="div-input-selecionar">
-                            <input required type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Inquérito geral</span>
+                            <input onclick="consultaSelecionada()" id="input-inquerito" required type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Inquérito geral</span>
                         </label>
                         <label id="label-suporte" class="div-input-selecionar">
-                            <input id="input-suporte" required type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Solicitar suporte</span>
+                            <input onclick="consultaSelecionada()" id="input-suporte" required type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Solicitar suporte</span>
                         </label>
-                        <p class="paragrafo-alerta-consulta">Este campo é obrigatório</p>
                     </label>
+                    <p class="paragrafo-alerta-consulta">Este campo é obrigatório</p>
                 </label>
             </div>
-            <div>
+            <div  class="div-label-textarea">
                 <label>
                     Mensagem <span class="obrigatorio">*</span>
                     <br>
@@ -60,10 +60,11 @@
             </div>
             <div>
                 <label class="label-checkbox">
-                    <input type="checkbox" class="input-aceito-contato"> Aceito ser contactado pela equipe
+                    <input onclick="checkboxSelecionado()" required type="checkbox" class="input-aceito-contato"> <p>Aceito ser contactado pela equipe <span class="obrigatorio">*</span></p>
                 </label>
+                <p class="paragrafo-alerta-checkbox">Para enviar este formulário, por favor aceite ser contactado</p>
             </div>
-            <button type="submit">Enviar</button>
+            <button type="submit" onclick="verificarTudo()">Enviar</button>
         </div>
     </form>
 </body>
