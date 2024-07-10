@@ -99,7 +99,7 @@ function mudarParaNeon(){
     bolinha.style.background = "hsl(176, 100%, 44%)"
     inputTela.style.background = "hsl(268, 71%, 12%)"
     inputTela.style.color = "hsl(52, 100%, 62%)"
-    divTeclado.style.background = "hsl(223, 31%, 20%)"
+    divTeclado.style.background = "hsl(268, 71%, 12%)"
 
     for(let i = 0; i < operadores.length; i++){
         operadores[i].style = `
