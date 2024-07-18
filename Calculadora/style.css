@@ -52,10 +52,6 @@ body{
     width: 26px;
 }
 
-.input-tema:active{
-    background-color: #FFFFFF;
-}
-
 .button-tema{
     display: flex;
     align-items: center;
