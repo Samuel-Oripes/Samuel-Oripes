@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background-color: #1A2A33;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-maior{
+    display: grid;
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 52px 140px 140px 140px 72px;
+    gap: 20px;
+}
+
+.logo{
+    height: 30px;
+}
+
+.imagem-turno{
+    width: 20px;
+}
+
+.div-turno{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(199, 35%, 19%);
+    box-shadow: 0 4px hsl(199, 35%, 10%);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    kerning: 1px;
+    color: hsl(198, 23%, 72%);
+}
+
+.botao-reiniciar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(198, 23%, 72%);
+    box-shadow: 0 4px hsl(198, 23%, 52%);
+
+}
+
+.jogo{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(199, 35%, 19%);
+    box-shadow: 0 5px hsl(199, 35%, 10%);
+}
+
+.div-reiniciar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div-logo{
+    display: flex;
+    align-items: center;
+}
+
+.div-jogador1, .div-jogador2, .div-empate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 14px;
+    kerning: 0.8px;
+    font-weight: normal;
+    color: hsl(202, 32%, 15%);
+}
+
+.div-jogador1{
+    background-color: hsl(178, 60%, 48%);
+}
+
+.div-jogador2{
+    background-color: hsl(39, 88%, 58%);
+}
+
+.div-empate{
+    background-color: hsl(198, 23%, 72%);
+}
+
+.placar{
+    font-size: 24px;
+    kerning: 1.5px;
+    font-weight: bold;
+}
+
+.div-alerta,.alerta-reiniciar{
+    position: fixed;
+    background-color: hsl(199, 35%, 19%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0;
+    top: -300px;
+}
+
+.bolinha-ganhou{
+    width: 64px;
+}
+
+.div-vencedor{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 16px 0 24px;
+}
+
+.fundo-escuro{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+
+.paragrafo-alerta{
+    font-size: 16px;
+    kerning: 1px;
+    font-weight: bold;
+    word-spacing: 2px;
+    color: hsl(198, 23%, 72%);
+}
+
+.div-vencedor, .mensagem-reiniciar{
+    word-spacing: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    kerning: 2.5px;
+    color: hsl(39, 88%, 58%);
+}
+
+.mensagem-reiniciar{
+    margin-bottom: 30px;
+    color: hsl(198, 23%, 72%);
+}
+
+.botao-sair, .novo-jogo, .reiniciar, .cancelar{
+    padding: 17px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    kerning: 1px;
+    color: hsl(202, 32%, 15%);
+}
+
+.botao-sair, .cancelar{
+    background-color: hsl(198, 23%, 72%);
+    box-shadow: 0 4px hsl(198, 23%, 52%);
+}
+ .novo-jogo, .reiniciar{
+    background-color: hsl(39, 88%, 58%);
+    box-shadow: 0 4px hsl(39, 88%, 38%);
+ }
+
+ .botoes-aviso, .div-botao-alerta{
+    display: flex;
+    gap: 16px;
+ }
+
+ .botao-sair:hover, .novo-jogo:hover, .reiniciar:hover, .cancelar:hover, .botao-reiniciar:hover{
+    opacity: 0.6;
+ }
+
+ .botao-sair:active, .novo-jogo:active, .reiniciar:active, .cancelar:active, .botao-reiniciar:active{
+    opacity: 1;
+ }

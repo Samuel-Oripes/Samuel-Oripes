@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="div-maior">
+
+            <div class="div-logo">
+                <img class="logo" src="./assets/logo.svg">
+            </div>
+            <div class="div-turno">
+                <img class="imagem-turno" src="./assets/imagem X.png">
+                <p>TURNO</p>
+            </div>
+            <div class="div-reiniciar">
+                <button class="botao-reiniciar">
+                    <img src="./assets/icon-restart.svg">
+                </button>
+            </div>
+            
+            <button value="1" onclick="marcar(1)" id="input1" class="jogo">
+                <img id="img1" src="">
+            </button>
+            <button value="2" onclick="marcar(2)" id="input2" class="jogo">
+                <img id="img2" src="">
+            </button>
+            <button value="3" onclick="marcar(3)" id="input3" class="jogo">
+                <img id="img3" src="">
+            </button>
+            <button value="4" onclick="marcar(4)" id="input4" class="jogo">
+                <img id="img4" src="">
+            </button>            
+            <button value="5" onclick="marcar(5)" id="input5" class="jogo">
+                <img id="img5" src="">
+            </button>            
+            <button value="6" onclick="marcar(6)" id="input6" class="jogo">
+                <img id="img6" src="">
+            </button>            
+            <button value="7" onclick="marcar(7)" id="input7" class="jogo">
+                <img id="img7" src="">
+            </button>            
+            <button value="8" onclick="marcar(8)" id="input8" class="jogo">
+                <img id="img8" src="">
+            </button>            
+            <button value="9" onclick="marcar(9)" id="input9" class="jogo">
+                <img id="img9" src="">
+            </button>
+
+            <div class="div-jogador1">
+                <p>X (VOCÊ)</p>
+                <p class="placar">0</p>
+            </div>
+            <div class="div-empate">
+                <p>EMPATES</p>
+                <p class="placar">0</p>
+            </div>
+            <div class="div-jogador2">
+                <p>O (CPU)</p>
+                <p class="placar">0</p>
+            </div>
+    </div>
+    <div class="fundo-escuro"></div>
+    <div class="div-alerta">
+        <p class="paragrafo-alerta"> JOGADOR 1 GANHOU!</p>
+        <div class="div-vencedor">
+            <img class="bolinha-ganhou" src="./assets/bolinha-ganhou.png">
+            <p> PONTUA A PARTIDA</p>
+        </div>
+        <div class="botoes-aviso">
+            <button class="botao-sair">SAIR</button>
+            <button class="novo-jogo">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+    <div class="alerta-reiniciar">
+        <p class="mensagem-reiniciar">REINICIAR O JOGO?</p>
+        <div class="div-botao-alerta">
+            <button class="cancelar">NÃO, CANCELAR</button>
+            <button class="reiniciar">SIM, REINICIAR</button>
+        </div>
+    </div>
 </body>
+<script src="./scripts.js"></script>
 </html>

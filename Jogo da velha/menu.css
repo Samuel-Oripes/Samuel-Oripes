@@ -121,6 +121,7 @@ body{
 }
 
 .novo-jogo-cpu, .novo-jogo-pessoa{
+    text-decoration: none;
     width: 100%;
     height: 63px;
     font-size: 20px;
@@ -128,8 +129,12 @@ body{
     kerning: 1.25px;
     border-radius: 10px;
     border: none;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(202, 32%, 15%);
 }
+
 
 .novo-jogo-cpu:hover, .novo-jogo-pessoa:hover{
     opacity: 0.8;
