@@ -119,7 +119,7 @@ body{
     top: -300px;
 }
 
-.bolinha-ganhou{
+.vencedor{
     width: 64px;
 }
 
@@ -136,7 +136,7 @@ body{
     height: 100vh;
     background-color: #000;
     opacity: 0.5;
-    display: none;
+    visibility: hidden;
 }
 
 .paragrafo-alerta{
@@ -158,6 +158,10 @@ body{
 .mensagem-reiniciar{
     margin-bottom: 30px;
     color: hsl(198, 23%, 72%);
+}
+
+.botao-sair{
+    text-decoration: none;
 }
 
 .botao-sair, .novo-jogo, .reiniciar, .cancelar{

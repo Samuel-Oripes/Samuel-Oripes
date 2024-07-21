@@ -6,7 +6,7 @@
     <title>Jogo da velha</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
     <div class="div-maior">
 
             <div class="div-logo">
@@ -17,7 +17,7 @@
                 <p>TURNO</p>
             </div>
             <div class="div-reiniciar">
-                <button class="botao-reiniciar">
+                <button onclick="reiniciar()" class="botao-reiniciar">
                     <img src="./assets/icon-restart.svg">
                 </button>
             </div>
@@ -51,35 +51,35 @@
             </button>
 
             <div class="div-jogador1">
-                <p>X (VOCÊ)</p>
-                <p class="placar">0</p>
+                <p class="primeiro-jogador">X (VOCÊ)</p>
+                <p id="jogador1" class="placar">0</p>
             </div>
             <div class="div-empate">
                 <p>EMPATES</p>
                 <p class="placar">0</p>
             </div>
             <div class="div-jogador2">
-                <p>O (CPU)</p>
-                <p class="placar">0</p>
+                <p class="segundo-jogador">O (CPU)</p>
+                <p id="jogador2" class="placar">0</p>
             </div>
     </div>
     <div class="fundo-escuro"></div>
     <div class="div-alerta">
         <p class="paragrafo-alerta"> JOGADOR 1 GANHOU!</p>
         <div class="div-vencedor">
-            <img class="bolinha-ganhou" src="./assets/bolinha-ganhou.png">
+            <img class="vencedor" src="./assets/bolinha-ganhou.png">
             <p> PONTUA A PARTIDA</p>
         </div>
         <div class="botoes-aviso">
-            <button class="botao-sair">SAIR</button>
-            <button class="novo-jogo">JOGAR NOVAMENTE</button>
+            <a href="./menu.html" class="botao-sair">SAIR</a>
+            <button onclick="jogarNovamente()" class="novo-jogo">JOGAR NOVAMENTE</button>
         </div>
     </div>
     <div class="alerta-reiniciar">
         <p class="mensagem-reiniciar">REINICIAR O JOGO?</p>
         <div class="div-botao-alerta">
-            <button class="cancelar">NÃO, CANCELAR</button>
-            <button class="reiniciar">SIM, REINICIAR</button>
+            <button onclick="nao()" class="cancelar">NÃO, CANCELAR</button>
+            <button onclick="sim()" class="reiniciar">SIM, REINICIAR</button>
         </div>
     </div>
 </body>

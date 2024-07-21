@@ -10,8 +10,8 @@
     <div class="div-maior">
         <img class="logo" src="./assets/logo.svg">
         <div class="div-escolha">
-            <p class="titulo">ESCOLHA A MARCA DO JOGADOR 1</p>
-            <label class="label" for="checkbox">
+            <p class="titulo">ESCOLHA O SÍMBOLO COM QUE DESEJA JOGAR</p>
+            <label onclick="mudarTime()" class="label" for="checkbox">
                 <input type="checkbox" id="checkbox">
                 <button class="botao-time"></button>
                 <div class="bolinha"></div>
@@ -21,9 +21,14 @@
             <p class="aviso">LEMBRE-SE: X VAI PRIMEIRO</p>
         </div>
         <div class="div-botao">
-            <a class="novo-jogo-cpu">NOVO JOGO (VS CPU)</a>
-            <a href="./jogo.html"  class="novo-jogo-pessoa">NOVO JOGO (2 JOGADORES)</a>
+            <label>
+                <a id="input-cpu" onclick="selecionarModo('cpu')" href="./jogo.html" class="novo-jogo-cpu">NOVO JOGO (VS CPU)</a>
+            </label>
+            <label>
+                <a id="input-pessoa" onclick="selecionarModo('multijogador')" id="input-2jogador" href="./jogo.html"  class="novo-jogo-pessoa">NOVO JOGO (2 JOGADORES)</a>
+            </label>
         </div>
     </div>
 </body>
+<script src="./scripts.js"></script>
 </html>
