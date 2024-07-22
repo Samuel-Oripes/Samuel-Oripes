@@ -490,7 +490,8 @@ function placarEmpatado(){
 
 function mensagemVitoria(valor){
 
-    divAlerta.style.top = "auto"
+    divAlerta.style.top = "50%"
+    divAlerta.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
 
     if(valor == "x"){
@@ -512,8 +513,10 @@ function mensagemVitoria(valor){
 
 function reiniciar(){
 
-    alertaReiniciar.style.top = "auto"
+    alertaReiniciar.style.top = "50%"
+    alertaReiniciar.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
+    computador()
 }
 
 function nao(){
@@ -535,6 +538,7 @@ function sim(){
     img1.src = img2.src = img3.src = img4.src = img5.src = img6.src = img7.src = img8.src = img9.src = ""
     jogador1.innerHTML = jogador2.innerHTML = deuVelha.innerHTML = "0"
     placar1 = placar2 = placarEmpate = 0
+    computador()
 }
 
 function jogarNovamente(){
@@ -621,31 +625,55 @@ function modoAlterado(){
 
 function computador(){
 
-let inputs = document.querySelectorAll(".input-empate")
-let inputsDesmarcados = []
+    if(modoEscolhido == "cpu"){
 
-    if(verificar % 2 == 0){
+    let inputs = document.querySelectorAll(".input-empate")
+    let inputsDesmarcados = ""
 
-        for (let i = 0; i < inputs.length; i++){
+        if(timeMudado == "O"){
+            if(verificar % 2 == 0){
 
-            if(inputs[i].checked == false){
-                
-                inputsDesmarcados += i
-                console.log(inputsDesmarcados)
+                for (let i = 0; i < inputs.length; i++){
+
+                    if(inputs[i].checked == false){
+                        
+                        inputsDesmarcados += i
+                        console.log(inputsDesmarcados)
+                    }
+                }
+
+                let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
+                let inputSobrando = inputsDesmarcados[sorteio]
+                let soma = parseInt(inputSobrando) + 1
+
+                inputs[inputSobrando].checked = true
+                empate(soma)
+                marcar(soma)
+
             }
         }
 
-        let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
-        let inputSobrando = inputsDesmarcados[sorteio]
-        let soma = inputSobrando + 1 /* reduce */
-        soma = eval(soma)
+        if(timeMudado == "X"){
 
-        inputs[inputSobrando].checked = true
-        empate(soma)
-        marcar(soma)
+            if(verificar % 2 != 0){
 
-        console.log(sorteio)
-        console.log(inputSobrando)
-        console.log(soma)
+                for (let i = 0; i < inputs.length; i++){
+
+                    if(inputs[i].checked == false){
+                        
+                        inputsDesmarcados += i
+                        console.log(inputsDesmarcados)
+                    }
+                }
+
+                let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
+                let inputSobrando = inputsDesmarcados[sorteio]
+                let soma = parseInt(inputSobrando) + 1
+
+                inputs[inputSobrando].checked = true
+                empate(soma)
+                marcar(soma)
+            }
+        }
     }
 }
