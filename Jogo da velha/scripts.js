@@ -466,8 +466,12 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else {
+    else if(inputEmpate1.checked && inputEmpate2.checked && inputEmpate3.checked && inputEmpate4.checked && inputEmpate5.checked && inputEmpate6.checked && inputEmpate7.checked && inputEmpate8.checked && inputEmpate9.checked == true){
         placarEmpatado()
+    }
+
+    else {
+        computador()
     }
 }
 
@@ -475,17 +479,15 @@ let placarEmpate = 0
 
 function placarEmpatado(){
 
-    if(inputEmpate1.checked && inputEmpate2.checked && inputEmpate3.checked && inputEmpate4.checked && inputEmpate5.checked && inputEmpate6.checked && inputEmpate7.checked && inputEmpate8.checked && inputEmpate9.checked == true){
-
         placarEmpate += 1
         deuVelha.innerHTML = placarEmpate
-        divAlerta.style.top = "auto"
+        divAlerta.style.top = "50%"
+        divAlerta.style.transform = "translateY(-50%)"
         fundoEscuro.style.visibility = "visible"
         jogadorGanhou.innerHTML = ""
         vencedor.style.display = "none"
         pontuaPartida.innerHTML = "EMPATE"
         divVencedor.style.color = "hsl(198, 23%, 72%)"
-    }
 }
 
 function mensagemVitoria(valor){
@@ -496,18 +498,62 @@ function mensagemVitoria(valor){
 
     if(valor == "x"){
 
-        pontuaPartida.innerHTML = "PONTUA A PARTIDA"
-        jogadorGanhou.innerHTML = "JOGADOR 1 GANHOU!"
-        vencedor.src = "./assets/icon-x.svg"
-        divVencedor.style.color = "hsl(178, 60%, 48%)"
+        if(modoEscolhido == "pessoa"){
+
+            pontuaPartida.innerHTML = "PONTUA A PARTIDA"
+            jogadorGanhou.innerHTML = "JOGADOR 1 GANHOU!"
+            vencedor.src = "./assets/icon-x.svg"
+            divVencedor.style.color = "hsl(178, 60%, 48%)"
+        }
+
+        if(modoEscolhido == "cpu"){
+
+            if(timeMudado == "X"){
+
+                pontuaPartida.innerHTML = "PONTUA A PARTIDA"
+                jogadorGanhou.innerHTML = "VOCÊ GANHOU!"
+                vencedor.src = "./assets/icon-x.svg"
+                divVencedor.style.color = "hsl(178, 60%, 48%)"
+            }
+
+            if(timeMudado == "O"){
+
+                pontuaPartida.innerHTML = "PONTUA A PARTIDA"
+                jogadorGanhou.innerHTML = "VOCÊ PERDEU!"
+                vencedor.src = "./assets/icon-x.svg"
+                divVencedor.style.color = "hsl(178, 60%, 48%)"
+            }
+        }
     }
 
     if(valor == "o"){
 
-        pontuaPartida.innerHTML = "PONTUA A PARTIDA"
-        jogadorGanhou.innerHTML = "JOGADOR 2 GANHOU!"
-        vencedor.src = "./assets/icon-o.svg"
-        divVencedor.style.color = "hsl(39, 88%, 58%)"
+        if(modoEscolhido == "pessoa"){
+
+            pontuaPartida.innerHTML = "PONTUA A PARTIDA"
+            jogadorGanhou.innerHTML = "JOGADOR 2 GANHOU!"
+            vencedor.src = "./assets/icon-o.svg"
+            divVencedor.style.color = "hsl(39, 88%, 58%)"
+        }
+
+        if(modoEscolhido == "cpu"){
+
+            if(timeMudado == "X"){
+
+                pontuaPartida.innerHTML = "PONTUA A PARTIDA"
+                jogadorGanhou.innerHTML = "VOCÊ PERDEU!"
+                vencedor.src = "./assets/icon-o.svg"
+                divVencedor.style.color = "hsl(39, 88%, 58%)"
+            }
+
+            if(timeMudado == "O"){
+
+                pontuaPartida.innerHTML = "PONTUA A PARTIDA"
+                jogadorGanhou.innerHTML = "VOCÊ GANHOU!"
+                vencedor.src = "./assets/icon-o.svg"
+                divVencedor.style.color = "hsl(39, 88%, 58%)"
+            }
+        }
     }
 }
 
@@ -516,7 +562,6 @@ function reiniciar(){
     alertaReiniciar.style.top = "50%"
     alertaReiniciar.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
-    computador()
 }
 
 function nao(){
@@ -552,6 +597,7 @@ function jogarNovamente(){
     input1.style = input2.style = input3.style = input4.style = input5.style = input6.style = input7.style = input8.style = input9.style = coresI
     img1.src = img2.src = img3.src = img4.src = img5.src = img6.src = img7.src = img8.src = img9.src = ""
     inputEmpate1.checked = inputEmpate2.checked = inputEmpate3.checked = inputEmpate4.checked = inputEmpate5.checked = inputEmpate6.checked = inputEmpate7.checked = inputEmpate8.checked = inputEmpate9.checked = false
+    computador()
 }
 
 const inputCpu = document.querySelector("#input-cpu")
@@ -625,12 +671,13 @@ function modoAlterado(){
 
 function computador(){
 
-    if(modoEscolhido == "cpu"){
+let inputs = document.querySelectorAll(".input-empate")
+let inputsDesmarcados = ""
 
-    let inputs = document.querySelectorAll(".input-empate")
-    let inputsDesmarcados = ""
+    if (modoEscolhido == "cpu"){
 
         if(timeMudado == "O"){
+
             if(verificar % 2 == 0){
 
                 for (let i = 0; i < inputs.length; i++){
@@ -638,7 +685,6 @@ function computador(){
                     if(inputs[i].checked == false){
                         
                         inputsDesmarcados += i
-                        console.log(inputsDesmarcados)
                     }
                 }
 
@@ -646,10 +692,11 @@ function computador(){
                 let inputSobrando = inputsDesmarcados[sorteio]
                 let soma = parseInt(inputSobrando) + 1
 
-                inputs[inputSobrando].checked = true
-                empate(soma)
-                marcar(soma)
-
+                setTimeout(() => {
+                    inputs[inputSobrando].checked = true
+                    empate(soma)
+                    marcar(soma)
+                },500)
             }
         }
 
@@ -670,9 +717,11 @@ function computador(){
                 let inputSobrando = inputsDesmarcados[sorteio]
                 let soma = parseInt(inputSobrando) + 1
 
-                inputs[inputSobrando].checked = true
-                empate(soma)
-                marcar(soma)
+                setTimeout(() => {
+                    inputs[inputSobrando].checked = true
+                    empate(soma)
+                    marcar(soma)
+                }, 500)
             }
         }
     }
