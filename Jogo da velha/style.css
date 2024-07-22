@@ -195,3 +195,8 @@ body{
  .botao-sair:active, .novo-jogo:active, .reiniciar:active, .cancelar:active, .botao-reiniciar:active{
     opacity: 1;
  }
+
+ .input-empate{
+    position: absolute;
+
+}

@@ -1,3 +1,5 @@
+const jogo = document.querySelector(".jogo")
+
 const input1 = document.querySelector("#input1")
 const input2 = document.querySelector("#input2")
 const input3 = document.querySelector("#input3")
@@ -8,6 +10,16 @@ const input7 = document.querySelector("#input7")
 const input8 = document.querySelector("#input8")
 const input9 = document.querySelector("#input9")
 
+const inputEmpate1 = document.querySelector("#input-empate1")
+const inputEmpate2 = document.querySelector("#input-empate2")
+const inputEmpate3 = document.querySelector("#input-empate3")
+const inputEmpate4 = document.querySelector("#input-empate4")
+const inputEmpate5 = document.querySelector("#input-empate5")
+const inputEmpate6 = document.querySelector("#input-empate6")
+const inputEmpate7 = document.querySelector("#input-empate7")
+const inputEmpate8 = document.querySelector("#input-empate8")
+const inputEmpate9 = document.querySelector("#input-empate9")
+
 const img1 = document.querySelector("#img1")
 const img2 = document.querySelector("#img2")
 const img3 = document.querySelector("#img3")
@@ -17,6 +29,9 @@ const img6 = document.querySelector("#img6")
 const img7 = document.querySelector("#img7")
 const img8 = document.querySelector("#img8")
 const img9 = document.querySelector("#img9")
+
+const pontuaPartida = document.querySelector(".pontua-a-partida")
+const deuVelha = document.querySelector("#deu-velha")
 
 const imgTurno = document.querySelector(".imagem-turno")
 
@@ -33,6 +48,55 @@ const jogador2 = document.querySelector("#jogador2")
 let placar1 = 0
 let placar2 = 0
 let verificar = 0
+
+function empate(valor){
+
+    if(valor == 1){
+
+        inputEmpate1.checked = true
+    }
+
+    if(valor == 2){
+
+        inputEmpate2.checked = true
+    }
+
+    if(valor == 3){
+
+        inputEmpate3.checked = true
+    }
+
+    if(valor == 4){
+
+        inputEmpate4.checked = true
+    }
+
+    if(valor == 5){
+
+        inputEmpate5.checked = true
+    }
+
+    if(valor == 6){
+
+        inputEmpate6.checked = true
+    }
+
+    if(valor == 7){
+
+        inputEmpate7.checked = true
+    }
+
+    if(valor == 8){
+
+        inputEmpate8.checked = true
+    }
+
+    if(valor == 9){
+
+        inputEmpate9.checked = true
+    }
+
+}
 
 function marcar(valor){
 
@@ -252,7 +316,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input4.value == "x" && input5.value == "x" && input6.value == "x"){
+    else if(input4.value == "x" && input5.value == "x" && input6.value == "x"){
 
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -262,7 +326,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input7.value == "x" && input8.value == "x" && input9.value == "x"){
+    else if(input7.value == "x" && input8.value == "x" && input9.value == "x"){
                 
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -272,7 +336,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input1.value == "x" && input4.value == "x" && input7.value == "x"){
+    else if(input1.value == "x" && input4.value == "x" && input7.value == "x"){
                         
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -282,7 +346,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input2.value == "x" && input5.value == "x" && input8.value == "x"){
+    else if(input2.value == "x" && input5.value == "x" && input8.value == "x"){
                         
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -292,7 +356,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if( input3.value == "x" && input6.value == "x" && input9.value == "x"){
+    else if( input3.value == "x" && input6.value == "x" && input9.value == "x"){
                         
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -302,7 +366,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input1.value == "x" && input5.value == "x" && input9.value == "x"){
+    else if(input1.value == "x" && input5.value == "x" && input9.value == "x"){
                         
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -312,7 +376,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input3.value == "x" && input5.value == "x" && input7.value == "x"){
+    else if(input3.value == "x" && input5.value == "x" && input7.value == "x"){
                         
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -322,7 +386,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    if(input1.value == "o" && input2.value == "o" && input3.value == "o"){
+    else if(input1.value == "o" && input2.value == "o" && input3.value == "o"){
 
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -332,7 +396,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input4.value == "o" && input5.value == "o" && input6.value == "o"){
+    else if(input4.value == "o" && input5.value == "o" && input6.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -342,7 +406,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input7.value == "o" && input8.value == "o" && input9.value == "o"){
+    else if(input7.value == "o" && input8.value == "o" && input9.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -352,7 +416,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input1.value == "o" && input4.value == "o" && input7.value == "o"){
+    else if(input1.value == "o" && input4.value == "o" && input7.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -362,7 +426,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input2.value == "o" && input5.value == "o" && input8.value == "o"){
+    else if(input2.value == "o" && input5.value == "o" && input8.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -372,7 +436,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input3.value == "o" && input6.value == "o" && input9.value == "o"){
+    else if(input3.value == "o" && input6.value == "o" && input9.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -382,7 +446,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input1.value == "o" && input5.value == "o" && input9.value == "o"){
+    else if(input1.value == "o" && input5.value == "o" && input9.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -392,7 +456,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    if(input3.value == "o" && input5.value == "o" && input7.value == "o"){
+    else if(input3.value == "o" && input5.value == "o" && input7.value == "o"){
         
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -400,6 +464,27 @@ function vitoria(){
         input3.style = input5.style = input7.style = coresO
         img3.src = img5.src = img7.src = "./assets/o-vitoria.png"
         mensagemVitoria("o")
+    }
+
+    else {
+        placarEmpatado()
+    }
+}
+
+let placarEmpate = 0
+
+function placarEmpatado(){
+
+    if(inputEmpate1.checked && inputEmpate2.checked && inputEmpate3.checked && inputEmpate4.checked && inputEmpate5.checked && inputEmpate6.checked && inputEmpate7.checked && inputEmpate8.checked && inputEmpate9.checked == true){
+
+        placarEmpate += 1
+        deuVelha.innerHTML = placarEmpate
+        divAlerta.style.top = "auto"
+        fundoEscuro.style.visibility = "visible"
+        jogadorGanhou.innerHTML = ""
+        vencedor.style.display = "none"
+        pontuaPartida.innerHTML = "EMPATE"
+        divVencedor.style.color = "hsl(198, 23%, 72%)"
     }
 }
 
@@ -410,6 +495,7 @@ function mensagemVitoria(valor){
 
     if(valor == "x"){
 
+        pontuaPartida.innerHTML = "PONTUA A PARTIDA"
         jogadorGanhou.innerHTML = "JOGADOR 1 GANHOU!"
         vencedor.src = "./assets/icon-x.svg"
         divVencedor.style.color = "hsl(178, 60%, 48%)"
@@ -417,6 +503,7 @@ function mensagemVitoria(valor){
 
     if(valor == "o"){
 
+        pontuaPartida.innerHTML = "PONTUA A PARTIDA"
         jogadorGanhou.innerHTML = "JOGADOR 2 GANHOU!"
         vencedor.src = "./assets/icon-o.svg"
         divVencedor.style.color = "hsl(39, 88%, 58%)"
@@ -438,14 +525,16 @@ function nao(){
 function sim(){
     
     imgTurno.src = "./assets/imagem x.png"
-    divAlerta.style.top = "-300px"
+    alertaReiniciar.style.top = "-300px"
     fundoEscuro.style.visibility = "hidden"
     verificar = 0
 
+    inputEmpate1.checked = inputEmpate2.checked = inputEmpate3.checked = inputEmpate4.checked = inputEmpate5.checked = inputEmpate6.checked = inputEmpate7.checked = inputEmpate8.checked = inputEmpate9.checked = false
     input1.value = input2.value = input3.value = input4.value = input5.value = input6.value = input7.value = input8.value = input9.value = "clicar"
     input1.style = input2.style = input3.style = input4.style = input5.style = input6.style = input7.style = input8.style = input9.style = coresI
     img1.src = img2.src = img3.src = img4.src = img5.src = img6.src = img7.src = img8.src = img9.src = ""
-    /* adicionar zerar placar*/
+    jogador1.innerHTML = jogador2.innerHTML = deuVelha.innerHTML = "0"
+    placar1 = placar2 = placarEmpate = 0
 }
 
 function jogarNovamente(){
@@ -458,6 +547,7 @@ function jogarNovamente(){
     input1.value = input2.value = input3.value = input4.value = input5.value = input6.value = input7.value = input8.value = input9.value = "clicar"
     input1.style = input2.style = input3.style = input4.style = input5.style = input6.style = input7.style = input8.style = input9.style = coresI
     img1.src = img2.src = img3.src = img4.src = img5.src = img6.src = img7.src = img8.src = img9.src = ""
+    inputEmpate1.checked = inputEmpate2.checked = inputEmpate3.checked = inputEmpate4.checked = inputEmpate5.checked = inputEmpate6.checked = inputEmpate7.checked = inputEmpate8.checked = inputEmpate9.checked = false
 }
 
 const inputCpu = document.querySelector("#input-cpu")
@@ -517,12 +607,45 @@ function modoAlterado(){
 
             primeiroJogador.innerHTML = "X (CPU)"
             segundoJogador.innerHTML = "O (VOCÊ)"
+            computador()
         }
 
         if(timeMudado == "X"){
 
             primeiroJogador.innerHTML = "X (VOCÊ)"
             segundoJogador.innerHTML = "O (CPU)"
+            computador()
         }
+    }
+}
+
+function computador(){
+
+let inputs = document.querySelectorAll(".input-empate")
+let inputsDesmarcados = []
+
+    if(verificar % 2 == 0){
+
+        for (let i = 0; i < inputs.length; i++){
+
+            if(inputs[i].checked == false){
+                
+                inputsDesmarcados += i
+                console.log(inputsDesmarcados)
+            }
+        }
+
+        let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
+        let inputSobrando = inputsDesmarcados[sorteio]
+        let soma = inputSobrando + 1 /* reduce */
+        soma = eval(soma)
+
+        inputs[inputSobrando].checked = true
+        empate(soma)
+        marcar(soma)
+
+        console.log(sorteio)
+        console.log(inputSobrando)
+        console.log(soma)
     }
 }

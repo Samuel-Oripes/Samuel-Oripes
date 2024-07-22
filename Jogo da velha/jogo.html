@@ -21,34 +21,62 @@
                     <img src="./assets/icon-restart.svg">
                 </button>
             </div>
-            
-            <button value="clicar" onclick="marcar(1)" id="input1" class="jogo">
-                <img id="img1" src="">
-            </button>
-            <button value="clicar" onclick="marcar(2)" id="input2" class="jogo">
-                <img id="img2" src="">
-            </button>
-            <button value="clicar" onclick="marcar(3)" id="input3" class="jogo">
-                <img id="img3" src="">
-            </button>
-            <button value="clicar" onclick="marcar(4)" id="input4" class="jogo">
-                <img id="img4" src="">
-            </button>            
-            <button value="clicar" onclick="marcar(5)" id="input5" class="jogo">
-                <img id="img5" src="">
-            </button>            
-            <button value="clicar" onclick="marcar(6)" id="input6" class="jogo">
-                <img id="img6" src="">
-            </button>            
-            <button value="clicar" onclick="marcar(7)" id="input7" class="jogo">
-                <img id="img7" src="">
-            </button>            
-            <button value="clicar" onclick="marcar(8)" id="input8" class="jogo">
-                <img id="img8" src="">
-            </button>            
-            <button value="clicar" onclick="marcar(9)" id="input9" class="jogo">
-                <img id="img9" src="">
-            </button>
+
+
+            <label>
+                <input type="checkbox" id="input-empate1" class="input-empate">
+                <button value="clicar" onclick="empate(1); marcar(1); computador()" id="input1" class="jogo">
+                    <img id="img1" src="">
+                </button>
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate2" class="input-empate">
+                <button value="clicar" onclick="empate(2); marcar(2); computador()" id="input2" class="jogo">
+                    <img id="img2" src="">
+                </button>
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate3" class="input-empate">
+                <button value="clicar" onclick="empate(3); marcar(3); computador()" id="input3" class="jogo">
+                    <img id="img3" src="">
+                </button>
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate4" class="input-empate">
+                <button value="clicar" onclick="empate(4); marcar(4); computador()" id="input4" class="jogo">
+                    <img id="img4" src="">
+                </button>
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate5" class="input-empate">
+                <button value="clicar" onclick="empate(5); marcar(5); computador()" id="input5" class="jogo">
+                    <img id="img5" src="">
+                </button>     
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate6" class="input-empate">
+                <button value="clicar" onclick="empate(6); marcar(6); computador()" id="input6" class="jogo">
+                    <img id="img6" src="">
+                </button>     
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate7" class="input-empate">
+                <button value="clicar" onclick="empate(7); marcar(7); computador()" id="input7" class="jogo">
+                    <img id="img7" src="">
+                </button>
+            </label>
+            <label>
+                <input type="checkbox" id="input-empate8" class="input-empate">
+                <button value="clicar" onclick="empate(8); marcar(8); computador()" id="input8" class="jogo">
+                    <img id="img8" src="">
+                </button>  
+            </label>       
+            <label> 
+                <input type="checkbox" id="input-empate9" class="input-empate">
+                <button value="clicar" onclick="empate(9); marcar(9); computador()" id="input9" class="jogo">
+                    <img id="img9" src="">
+                </button>
+            </label>
 
             <div class="div-jogador1">
                 <p class="primeiro-jogador">X (VOCÊ)</p>
@@ -56,7 +84,7 @@
             </div>
             <div class="div-empate">
                 <p>EMPATES</p>
-                <p class="placar">0</p>
+                <p id="deu-velha" class="placar">0</p>
             </div>
             <div class="div-jogador2">
                 <p class="segundo-jogador">O (CPU)</p>
@@ -68,7 +96,7 @@
         <p class="paragrafo-alerta"> JOGADOR 1 GANHOU!</p>
         <div class="div-vencedor">
             <img class="vencedor" src="./assets/bolinha-ganhou.png">
-            <p> PONTUA A PARTIDA</p>
+            <p class="pontua-a-partida"> PONTUA A PARTIDA</p>
         </div>
         <div class="botoes-aviso">
             <a href="./menu.html" class="botao-sair">SAIR</a>
