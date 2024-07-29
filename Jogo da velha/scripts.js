@@ -49,62 +49,62 @@ let placar1 = 0
 let placar2 = 0
 let verificar = 0
 
-function empate(valor){
+function empate(valor) {
 
-    if(valor == 1){
+    if (valor == 1) {
 
         inputEmpate1.checked = true
     }
 
-    if(valor == 2){
+    if (valor == 2) {
 
         inputEmpate2.checked = true
     }
 
-    if(valor == 3){
+    if (valor == 3) {
 
         inputEmpate3.checked = true
     }
 
-    if(valor == 4){
+    if (valor == 4) {
 
         inputEmpate4.checked = true
     }
 
-    if(valor == 5){
+    if (valor == 5) {
 
         inputEmpate5.checked = true
     }
 
-    if(valor == 6){
+    if (valor == 6) {
 
         inputEmpate6.checked = true
     }
 
-    if(valor == 7){
+    if (valor == 7) {
 
         inputEmpate7.checked = true
     }
 
-    if(valor == 8){
+    if (valor == 8) {
 
         inputEmpate8.checked = true
     }
 
-    if(valor == 9){
+    if (valor == 9) {
 
         inputEmpate9.checked = true
     }
 
 }
 
-function marcar(valor){
+function marcar(valor) {
 
-    if(valor == 1){
+    if (valor == 1) {
 
-        if(input1.value == "clicar"){
+        if (input1.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img1.src = "./assets/icon-x.svg"
@@ -121,11 +121,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 2){
+    if (valor == 2) {
 
-        if(input2.value == "clicar"){
+        if (input2.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img2.src = "./assets/icon-x.svg"
@@ -142,11 +142,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 3){
+    if (valor == 3) {
 
-        if(input3.value == "clicar"){
+        if (input3.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img3.src = "./assets/icon-x.svg"
@@ -163,11 +163,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 4){
+    if (valor == 4) {
 
-        if(input4.value == "clicar"){
+        if (input4.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img4.src = "./assets/icon-x.svg"
@@ -184,11 +184,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 5){
+    if (valor == 5) {
 
-        if(input5.value == "clicar"){
+        if (input5.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img5.src = "./assets/icon-x.svg"
@@ -205,11 +205,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 6){
+    if (valor == 6) {
 
-        if(input6.value == "clicar"){
+        if (input6.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img6.src = "./assets/icon-x.svg"
@@ -226,11 +226,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 7){
+    if (valor == 7) {
 
-        if(input7.value == "clicar"){
+        if (input7.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img7.src = "./assets/icon-x.svg"
@@ -247,11 +247,11 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 8){
+    if (valor == 8) {
 
-        if(input8.value == "clicar"){
+        if (input8.value == "clicar") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
                 imgTurno.src = "./assets/imagem O.png"
                 img8.src = "./assets/icon-x.svg"
@@ -268,12 +268,12 @@ function marcar(valor){
         vitoria()
     }
 
-    if(valor == 9){
+    if (valor == 9) {
 
-        if(input9.value == "clicar"){
+        if (input9.value == "clicar") {
 
-            if(verificar % 2 == 0){
-                
+            if (verificar % 2 == 0) {
+
                 imgTurno.src = "./assets/imagem O.png"
                 img9.src = "./assets/icon-x.svg"
                 verificar += 1
@@ -304,10 +304,10 @@ const coresI = `
             box-shadow: 0 5px hsl(199, 35%, 10%);
             `
 
-function vitoria(){
+function vitoria() {
 
-    if(input1.value == "x" && input2.value == "x" && input3.value == "x"){
-        
+    if (input1.value == "x" && input2.value == "x" && input3.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -316,7 +316,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input4.value == "x" && input5.value == "x" && input6.value == "x"){
+    else if (input4.value == "x" && input5.value == "x" && input6.value == "x") {
 
         placar1 += 1
         jogador1.innerHTML = placar1
@@ -326,8 +326,8 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input7.value == "x" && input8.value == "x" && input9.value == "x"){
-                
+    else if (input7.value == "x" && input8.value == "x" && input9.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -336,8 +336,8 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input1.value == "x" && input4.value == "x" && input7.value == "x"){
-                        
+    else if (input1.value == "x" && input4.value == "x" && input7.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -346,8 +346,8 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input2.value == "x" && input5.value == "x" && input8.value == "x"){
-                        
+    else if (input2.value == "x" && input5.value == "x" && input8.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -356,8 +356,8 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if( input3.value == "x" && input6.value == "x" && input9.value == "x"){
-                        
+    else if (input3.value == "x" && input6.value == "x" && input9.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -366,8 +366,8 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input1.value == "x" && input5.value == "x" && input9.value == "x"){
-                        
+    else if (input1.value == "x" && input5.value == "x" && input9.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -376,8 +376,8 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input3.value == "x" && input5.value == "x" && input7.value == "x"){
-                        
+    else if (input3.value == "x" && input5.value == "x" && input7.value == "x") {
+
         placar1 += 1
         jogador1.innerHTML = placar1
 
@@ -386,7 +386,7 @@ function vitoria(){
         mensagemVitoria("x")
     }
 
-    else if(input1.value == "o" && input2.value == "o" && input3.value == "o"){
+    else if (input1.value == "o" && input2.value == "o" && input3.value == "o") {
 
         placar2 += 1
         jogador2.innerHTML = placar2
@@ -396,8 +396,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input4.value == "o" && input5.value == "o" && input6.value == "o"){
-        
+    else if (input4.value == "o" && input5.value == "o" && input6.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -406,8 +406,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input7.value == "o" && input8.value == "o" && input9.value == "o"){
-        
+    else if (input7.value == "o" && input8.value == "o" && input9.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -416,8 +416,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input1.value == "o" && input4.value == "o" && input7.value == "o"){
-        
+    else if (input1.value == "o" && input4.value == "o" && input7.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -426,8 +426,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input2.value == "o" && input5.value == "o" && input8.value == "o"){
-        
+    else if (input2.value == "o" && input5.value == "o" && input8.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -436,8 +436,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input3.value == "o" && input6.value == "o" && input9.value == "o"){
-        
+    else if (input3.value == "o" && input6.value == "o" && input9.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -446,8 +446,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input1.value == "o" && input5.value == "o" && input9.value == "o"){
-        
+    else if (input1.value == "o" && input5.value == "o" && input9.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -456,8 +456,8 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(input3.value == "o" && input5.value == "o" && input7.value == "o"){
-        
+    else if (input3.value == "o" && input5.value == "o" && input7.value == "o") {
+
         placar2 += 1
         jogador2.innerHTML = placar2
 
@@ -466,7 +466,7 @@ function vitoria(){
         mensagemVitoria("o")
     }
 
-    else if(inputEmpate1.checked && inputEmpate2.checked && inputEmpate3.checked && inputEmpate4.checked && inputEmpate5.checked && inputEmpate6.checked && inputEmpate7.checked && inputEmpate8.checked && inputEmpate9.checked == true){
+    else if (inputEmpate1.checked && inputEmpate2.checked && inputEmpate3.checked && inputEmpate4.checked && inputEmpate5.checked && inputEmpate6.checked && inputEmpate7.checked && inputEmpate8.checked && inputEmpate9.checked == true) {
         placarEmpatado()
     }
 
@@ -477,28 +477,28 @@ function vitoria(){
 
 let placarEmpate = 0
 
-function placarEmpatado(){
+function placarEmpatado() {
 
-        placarEmpate += 1
-        deuVelha.innerHTML = placarEmpate
-        divAlerta.style.top = "50%"
-        divAlerta.style.transform = "translateY(-50%)"
-        fundoEscuro.style.visibility = "visible"
-        jogadorGanhou.innerHTML = ""
-        vencedor.style.display = "none"
-        pontuaPartida.innerHTML = "EMPATE"
-        divVencedor.style.color = "hsl(198, 23%, 72%)"
+    placarEmpate += 1
+    deuVelha.innerHTML = placarEmpate
+    divAlerta.style.top = "50%"
+    divAlerta.style.transform = "translateY(-50%)"
+    fundoEscuro.style.visibility = "visible"
+    jogadorGanhou.innerHTML = ""
+    vencedor.style.display = "none"
+    pontuaPartida.innerHTML = "EMPATE"
+    divVencedor.style.color = "hsl(198, 23%, 72%)"
 }
 
-function mensagemVitoria(valor){
+function mensagemVitoria(valor) {
 
     divAlerta.style.top = "50%"
     divAlerta.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
 
-    if(valor == "x"){
+    if (valor == "x") {
 
-        if(modoEscolhido == "pessoa"){
+        if (modoEscolhido == "pessoa") {
 
             pontuaPartida.innerHTML = "PONTUA A PARTIDA"
             jogadorGanhou.innerHTML = "JOGADOR 1 GANHOU!"
@@ -506,9 +506,9 @@ function mensagemVitoria(valor){
             divVencedor.style.color = "hsl(178, 60%, 48%)"
         }
 
-        if(modoEscolhido == "cpu"){
+        if (modoEscolhido == "cpu") {
 
-            if(timeMudado == "X"){
+            if (timeMudado == "X") {
 
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ GANHOU!"
@@ -516,7 +516,7 @@ function mensagemVitoria(valor){
                 divVencedor.style.color = "hsl(178, 60%, 48%)"
             }
 
-            if(timeMudado == "O"){
+            if (timeMudado == "O") {
 
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ PERDEU!"
@@ -526,9 +526,9 @@ function mensagemVitoria(valor){
         }
     }
 
-    if(valor == "o"){
+    if (valor == "o") {
 
-        if(modoEscolhido == "pessoa"){
+        if (modoEscolhido == "pessoa") {
 
             pontuaPartida.innerHTML = "PONTUA A PARTIDA"
             jogadorGanhou.innerHTML = "JOGADOR 2 GANHOU!"
@@ -536,9 +536,9 @@ function mensagemVitoria(valor){
             divVencedor.style.color = "hsl(39, 88%, 58%)"
         }
 
-        if(modoEscolhido == "cpu"){
+        if (modoEscolhido == "cpu") {
 
-            if(timeMudado == "X"){
+            if (timeMudado == "X") {
 
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ PERDEU!"
@@ -546,7 +546,7 @@ function mensagemVitoria(valor){
                 divVencedor.style.color = "hsl(39, 88%, 58%)"
             }
 
-            if(timeMudado == "O"){
+            if (timeMudado == "O") {
 
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ GANHOU!"
@@ -557,21 +557,21 @@ function mensagemVitoria(valor){
     }
 }
 
-function reiniciar(){
+function reiniciar() {
 
     alertaReiniciar.style.top = "50%"
     alertaReiniciar.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
 }
 
-function nao(){
+function nao() {
 
     alertaReiniciar.style.top = "-300px"
     fundoEscuro.style.visibility = "hidden"
 }
 
-function sim(){
-    
+function sim() {
+
     imgTurno.src = "./assets/imagem x.png"
     alertaReiniciar.style.top = "-300px"
     fundoEscuro.style.visibility = "hidden"
@@ -586,7 +586,7 @@ function sim(){
     computador()
 }
 
-function jogarNovamente(){
+function jogarNovamente() {
 
     imgTurno.src = "./assets/imagem x.png"
     divAlerta.style.top = "-300px"
@@ -609,31 +609,31 @@ const inputEscolha = document.querySelector("#checkbox")
 let modoEscolhido = sessionStorage.getItem("modo")
 let timeMudado = sessionStorage.getItem("time")
 
-function mudarTime(){
-     let timeMudar = ""
+function mudarTime() {
+    let timeMudar = ""
 
-     if(inputEscolha.checked){
+    if (inputEscolha.checked) {
 
         inputEscolha.value = "O"
         timeMudar = inputEscolha.value
-     } else {
+    } else {
         inputEscolha.value = "X"
         timeMudar = inputEscolha.value
-     }
+    }
 
-     window.sessionStorage.setItem("time", timeMudar)
+    window.sessionStorage.setItem("time", timeMudar)
 }
 
-function selecionarModo(modo){
+function selecionarModo(modo) {
 
     let modoEscolher = ""
 
-    if(modo === "cpu"){
+    if (modo === "cpu") {
         inputCpu.value = "cpu"
         modoEscolher = inputCpu.value
     }
 
-    if(modo === "multijogador"){
+    if (modo === "multijogador") {
         inputPessoa.value = "pessoa"
         modoEscolher = inputPessoa.value
     }
@@ -643,24 +643,24 @@ function selecionarModo(modo){
 
 window.addEventListener('load', modoAlterado())
 
-function modoAlterado(){
+function modoAlterado() {
 
-    if(modoEscolhido == "pessoa"){
+    if (modoEscolhido == "pessoa") {
 
         primeiroJogador.innerHTML = "X (JOGADOR 1)"
         segundoJogador.innerHTML = "O (JOGADOR 2)"
     }
 
-    if(modoEscolhido == "cpu"){
+    if (modoEscolhido == "cpu") {
 
-        if(timeMudado == "O"){
+        if (timeMudado == "O") {
 
             primeiroJogador.innerHTML = "X (CPU)"
             segundoJogador.innerHTML = "O (VOCÊ)"
             computador()
         }
 
-        if(timeMudado == "X"){
+        if (timeMudado == "X") {
 
             primeiroJogador.innerHTML = "X (VOCÊ)"
             segundoJogador.innerHTML = "O (CPU)"
@@ -669,59 +669,828 @@ function modoAlterado(){
     }
 }
 
-function computador(){
+function computador() {
 
-let inputs = document.querySelectorAll(".input-empate")
-let inputsDesmarcados = ""
+    let inputs = document.querySelectorAll(".input-empate")
+    let inputsDesmarcados = ""
 
-    if (modoEscolhido == "cpu"){
+    if (modoEscolhido == "cpu") {
 
-        if(timeMudado == "O"){
+        if (timeMudado == "O") {
 
-            if(verificar % 2 == 0){
+            if (verificar % 2 == 0) {
 
-                for (let i = 0; i < inputs.length; i++){
+                if (input1.value == "x" && input2.value == "x" && inputEmpate3.checked == false) {
 
-                    if(inputs[i].checked == false){
-                        
-                        inputsDesmarcados += i
-                    }
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
                 }
 
-                let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
-                let inputSobrando = inputsDesmarcados[sorteio]
-                let soma = parseInt(inputSobrando) + 1
+                else if (input1.value == "x" && input3.value == "x" && inputEmpate2.checked == false) {
 
-                setTimeout(() => {
-                    inputs[inputSobrando].checked = true
-                    empate(soma)
-                    marcar(soma)
-                },500)
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input2.value == "x" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input4.value == "x" && input5.value == "x" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input4.value == "x" && input6.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input6.value == "x" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input7.value == "x" && input8.value == "x" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input7.value == "x" && input9.value == "x" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input8.value == "x" && input9.value == "x" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input4.value == "x" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input7.value == "x" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input4.value == "x" && input7.value == "x" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input2.value == "x" && input5.value == "x" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input8.value == "x" && inputEmpate2.checked == false) {
+
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input2.value == "x" && input8.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input6.value == "x" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input9.value == "x" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input6.value == "x" && input9.value == "x" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input5.value == "x" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input9.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input9.value == "x" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input5.value == "x" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input7.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input7.value == "x" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input2.value == "o" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input3.value == "o" && inputEmpate2.checked == false) {
+
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input2.value == "o" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input4.value == "o" && input5.value == "o" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input4.value == "o" && input6.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input6.value == "o" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input7.value == "o" && input8.value == "o" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input7.value == "o" && input9.value == "o" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input8.value == "o" && input9.value == "o" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input4.value == "o" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input7.value == "o" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input4.value == "o" && input7.value == "o" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input2.value == "o" && input5.value == "o" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input8.value == "o" && inputEmpate2.checked == false) {
+
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input2.value == "o" && input8.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input6.value == "o" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input9.value == "o" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input6.value == "o" && input9.value == "o" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input5.value == "o" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input9.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input9.value == "o" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input5.value == "o" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input7.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input7.value == "o" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else {
+
+                    for (let i = 0; i < inputs.length; i++) {
+
+                        if (inputs[i].checked == false) {
+                            inputsDesmarcados += i
+                        }
+                    }
+
+                    let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
+                    let inputSobrando = inputsDesmarcados[sorteio]
+                    let soma = parseInt(inputSobrando) + 1
+
+                    setTimeout(() => {
+                        empate(soma)
+                        marcar(soma)
+                    }, 500)
+                }
             }
         }
 
-        if(timeMudado == "X"){
+        if (timeMudado == "X") {
 
-            if(verificar % 2 != 0){
+            if (verificar % 2 != 0) {
 
-                for (let i = 0; i < inputs.length; i++){
+                if (input1.value == "o" && input2.value == "o" && inputEmpate3.checked == false) {
 
-                    if(inputs[i].checked == false){
-                        
-                        inputsDesmarcados += i
-                        console.log(inputsDesmarcados)
-                    }
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
                 }
 
-                let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
-                let inputSobrando = inputsDesmarcados[sorteio]
-                let soma = parseInt(inputSobrando) + 1
+                else if (input1.value == "o" && input3.value == "o" && inputEmpate2.checked == false) {
 
-                setTimeout(() => {
-                    inputs[inputSobrando].checked = true
-                    empate(soma)
-                    marcar(soma)
-                }, 500)
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input2.value == "o" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input4.value == "o" && input5.value == "o" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input4.value == "o" && input6.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input6.value == "o" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input7.value == "o" && input8.value == "o" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input7.value == "o" && input9.value == "o" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input8.value == "o" && input9.value == "o" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input4.value == "o" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input7.value == "o" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input4.value == "o" && input7.value == "o" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input2.value == "o" && input5.value == "o" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input8.value == "o" && inputEmpate2.checked == false) {
+
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input2.value == "o" && input8.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input6.value == "o" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input9.value == "o" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input6.value == "o" && input9.value == "o" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input5.value == "o" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input1.value == "o" && input9.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input9.value == "o" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input5.value == "o" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input3.value == "o" && input7.value == "o" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "o" && input7.value == "o" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input2.value == "x" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input3.value == "x" && inputEmpate2.checked == false) {
+
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input2.value == "x" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input4.value == "x" && input5.value == "x" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input4.value == "x" && input6.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input6.value == "x" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input7.value == "x" && input8.value == "x" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input7.value == "x" && input9.value == "x" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input8.value == "x" && input9.value == "x" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input4.value == "x" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input7.value == "x" && inputEmpate4.checked == false) {
+
+                    setTimeout(() => {
+                        empate(4)
+                        marcar(4)
+                    }, 500)
+                }
+
+                else if (input4.value == "x" && input7.value == "x" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input2.value == "x" && input5.value == "x" && inputEmpate8.checked == false) {
+
+                    setTimeout(() => {
+                        empate(8)
+                        marcar(8)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input8.value == "x" && inputEmpate2.checked == false) {
+
+                    setTimeout(() => {
+                        empate(2)
+                        marcar(2)
+                    }, 500)
+                }
+
+                else if (input2.value == "x" && input8.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input6.value == "x" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input9.value == "x" && inputEmpate6.checked == false) {
+
+                    setTimeout(() => {
+                        empate(6)
+                        marcar(6)
+                    }, 500)
+                }
+
+                else if (input6.value == "x" && input9.value == "x" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input5.value == "x" && inputEmpate9.checked == false) {
+
+                    setTimeout(() => {
+                        empate(9)
+                        marcar(9)
+                    }, 500)
+                }
+
+                else if (input1.value == "x" && input9.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input9.value == "x" && inputEmpate1.checked == false) {
+
+                    setTimeout(() => {
+                        empate(1)
+                        marcar(1)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input5.value == "x" && inputEmpate7.checked == false) {
+
+                    setTimeout(() => {
+                        empate(7)
+                        marcar(7)
+                    }, 500)
+                }
+
+                else if (input3.value == "x" && input7.value == "x" && inputEmpate5.checked == false) {
+
+                    setTimeout(() => {
+                        empate(5)
+                        marcar(5)
+                    }, 500)
+                }
+
+                else if (input5.value == "x" && input7.value == "x" && inputEmpate3.checked == false) {
+
+                    setTimeout(() => {
+                        empate(3)
+                        marcar(3)
+                    }, 500)
+                }
+
+                else {
+
+                    for (let i = 0; i < inputs.length; i++) {
+
+                        if (inputs[i].checked == false) {
+                            inputsDesmarcados += i
+                        }
+                    }
+
+                    let sorteio = Math.floor(Math.random() * inputsDesmarcados.length)
+                    let inputSobrando = inputsDesmarcados[sorteio]
+                    let soma = parseInt(inputSobrando) + 1
+
+                    setTimeout(() => {
+                        empate(soma)
+                        marcar(soma)
+                    }, 500)
+                }
             }
         }
     }
