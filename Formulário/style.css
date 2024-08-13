@@ -248,7 +248,9 @@ button:hover{
 }
 
 .div-formulario{
-    width: 90vw;
+    width: 95vw;
+    padding: 20px;
+    margin: 20px 0;
 }
 
 #label-suporte{
