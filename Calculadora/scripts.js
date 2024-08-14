@@ -127,27 +127,37 @@ function mudarParaNeon(){
 }
 
 let teclas = ""
+let visor = ""
 
 function mostrarNaTela(numeros){
 
     teclas += numeros 
-    inputTela.value = teclas
+
+    if(numeros == "."){
+        visor += ","
+    } else {
+        visor += numeros
+    }
+    
+    inputTela.value = visor
 }
 
 function limparTela(){
 
     teclas = ""
-    inputTela.value = teclas
+    visor = ""
+    inputTela.value = visor
 }
 
 function deletarDigito(){
 
     teclas = teclas.slice(0,-1)
-    inputTela.value = teclas
+    visor = visor.slice(0,-1)
+    inputTela.value = visor
 }
 
 function calcular(){
 
     teclas = eval(teclas)
-    inputTela.value = teclas
+    inputTela.value = teclas.toLocaleString("es-AR")
 }
