@@ -154,5 +154,10 @@ body{
     box-shadow: 0 5px hsl(178, 60%, 30%);
 }
 
+@media screen and (max-width:450px){
 
+    .div-maior{
+        width: 95vw;
+    }
+}
 

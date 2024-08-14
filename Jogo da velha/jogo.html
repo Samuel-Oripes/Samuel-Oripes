@@ -6,7 +6,7 @@
     <title>Jogo da velha</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+<body>
     <div class="div-maior">
 
             <div class="div-logo">
@@ -93,14 +93,16 @@
     </div>
     <div class="fundo-escuro"></div>
     <div class="div-alerta">
-        <p class="paragrafo-alerta"> JOGADOR 1 GANHOU!</p>
-        <div class="div-vencedor">
-            <img class="vencedor" src="./assets/bolinha-ganhou.png">
-            <p class="pontua-a-partida"> PONTUA A PARTIDA</p>
-        </div>
-        <div class="botoes-aviso">
-            <a href="./menu.html" class="botao-sair">SAIR</a>
-            <button onclick="jogarNovamente()" class="novo-jogo">JOGAR NOVAMENTE</button>
+        <div class="div-alerta2">
+            <p class="paragrafo-alerta"> JOGADOR 1 GANHOU!</p>
+            <div class="div-vencedor">
+                <img class="vencedor" src="./assets/bolinha-ganhou.png">
+                <p class="pontua-a-partida"> PONTUA A PARTIDA</p>
+            </div>
+            <div class="botoes-aviso">
+                <a href="./menu.html" class="botao-sair">SAIR</a>
+                <button onclick="jogarNovamente()" class="novo-jogo">JOGAR NOVAMENTE</button>
+            </div>
         </div>
     </div>
     <div class="alerta-reiniciar">

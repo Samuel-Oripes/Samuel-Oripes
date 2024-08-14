@@ -481,6 +481,7 @@ function placarEmpatado() {
 
     placarEmpate += 1
     deuVelha.innerHTML = placarEmpate
+    divAlerta.style.visibility = "visible"
     divAlerta.style.top = "50%"
     divAlerta.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
@@ -492,6 +493,7 @@ function placarEmpatado() {
 
 function mensagemVitoria(valor) {
 
+    divAlerta.style.visibility = "visible"
     divAlerta.style.top = "50%"
     divAlerta.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
@@ -500,6 +502,7 @@ function mensagemVitoria(valor) {
 
         if (modoEscolhido == "pessoa") {
 
+            vencedor.style.display = "block"
             pontuaPartida.innerHTML = "PONTUA A PARTIDA"
             jogadorGanhou.innerHTML = "JOGADOR 1 GANHOU!"
             vencedor.src = "./assets/icon-x.svg"
@@ -510,6 +513,7 @@ function mensagemVitoria(valor) {
 
             if (timeMudado == "X") {
 
+                vencedor.style.display = "block"
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ GANHOU!"
                 vencedor.src = "./assets/icon-x.svg"
@@ -518,6 +522,7 @@ function mensagemVitoria(valor) {
 
             if (timeMudado == "O") {
 
+                vencedor.style.display = "block"
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ PERDEU!"
                 vencedor.src = "./assets/icon-x.svg"
@@ -530,6 +535,7 @@ function mensagemVitoria(valor) {
 
         if (modoEscolhido == "pessoa") {
 
+            vencedor.style.display = "block"
             pontuaPartida.innerHTML = "PONTUA A PARTIDA"
             jogadorGanhou.innerHTML = "JOGADOR 2 GANHOU!"
             vencedor.src = "./assets/icon-o.svg"
@@ -540,6 +546,7 @@ function mensagemVitoria(valor) {
 
             if (timeMudado == "X") {
 
+                vencedor.style.display = "block"
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ PERDEU!"
                 vencedor.src = "./assets/icon-o.svg"
@@ -548,6 +555,7 @@ function mensagemVitoria(valor) {
 
             if (timeMudado == "O") {
 
+                vencedor.style.display = "block"
                 pontuaPartida.innerHTML = "PONTUA A PARTIDA"
                 jogadorGanhou.innerHTML = "VOCÊ GANHOU!"
                 vencedor.src = "./assets/icon-o.svg"
@@ -559,6 +567,7 @@ function mensagemVitoria(valor) {
 
 function reiniciar() {
 
+    alertaReiniciar.style.visibility = "visible"
     alertaReiniciar.style.top = "50%"
     alertaReiniciar.style.transform = "translateY(-50%)"
     fundoEscuro.style.visibility = "visible"
@@ -568,6 +577,9 @@ function nao() {
 
     alertaReiniciar.style.top = "-300px"
     fundoEscuro.style.visibility = "hidden"
+    setTimeout(function(){
+        alertaReiniciar.style.visibility = "hidden"
+    },500)
 }
 
 function sim() {
@@ -575,6 +587,9 @@ function sim() {
     imgTurno.src = "./assets/imagem x.png"
     alertaReiniciar.style.top = "-300px"
     fundoEscuro.style.visibility = "hidden"
+    setTimeout(function(){
+        alertaReiniciar.style.visibility = "hidden"
+    },500)
     verificar = 0
 
     inputEmpate1.checked = inputEmpate2.checked = inputEmpate3.checked = inputEmpate4.checked = inputEmpate5.checked = inputEmpate6.checked = inputEmpate7.checked = inputEmpate8.checked = inputEmpate9.checked = false
@@ -588,6 +603,9 @@ function sim() {
 
 function jogarNovamente() {
 
+    setTimeout(function(){
+        divAlerta.style.visibility = "hidden"
+    },500)
     imgTurno.src = "./assets/imagem x.png"
     divAlerta.style.top = "-300px"
     fundoEscuro.style.visibility = "hidden"
