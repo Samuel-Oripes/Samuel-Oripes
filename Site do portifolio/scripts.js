@@ -60,23 +60,31 @@ const animacaoScroll = new IntersectionObserver( (dados) => {
 
 animacaoScroll.observe(footer)
 
-const html = document.querySelector("#html")
-const css = document.querySelector("#css")
-const js = document.querySelector("#js")
-const resp = document.querySelector("#resp")
-const nav = document.querySelector(".nav")
+const header = document.querySelector(".header")
 
-const efeitoEscrever = new IntersectionObserver( (valores) => {
+const paragrafo = document.querySelector(".sobre-mim-header")
+const texto = ['Sou um programador Front End e logo abaixo você poderá conferir alguns dos meus trabalhos. Sinta-se à vontade para entrar em contato comigo a qualquer momento, seria um prazer trabalhar com você!']
 
-    valores.forEach((valor) => {
+const animacaoDigitar = new IntersectionObserver( (dados) => {
 
-        if(valor.isIntersecting === true){
+    dados.forEach((dado) => {
 
-            html.style = `
-                animation-play-state: running;
-            `
+        if(dado.isIntersecting === true){
+
+            const digitar = () => {
+                currentMessage = texto[messageIndex]
+                currentCharacters = currentMessage.slice(0, characterIndex++)
+                paragrafo.textContent = currentCharacters
+            }
+            setInterval(digitar, 30)
         }
     })
+
 })
 
-efeitoEscrever.observe(nav)
+let messageIndex = 0
+let characterIndex = 0
+let currentMessage = ""
+let currentCharacters = ""
+
+animacaoDigitar.observe(header)
