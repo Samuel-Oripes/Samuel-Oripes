@@ -61,7 +61,7 @@ h3{
     line-height: 32px;
 }
 
-.contate-me-header{
+.contate-me-header,.links-projeto{
     text-decoration: none;
     padding-bottom: 10px;
     border-bottom: solid 2px hsl(153, 71%, 59%);
@@ -87,11 +87,16 @@ h3{
 }
 
 nav{
-    padding: 72px 0 82px;
+    padding: 72px 0 14px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     justify-content: space-between;
     border-top: solid 1px hsl(0, 0%, 100%);
+    border-bottom: solid 1px hsl(0, 0%, 100%);
+}
+
+main{
+    margin-top: 80px;
 }
 
 h2{
@@ -173,7 +178,14 @@ form{
     resize: none;
     padding: 10px 24px;
 }
-.inputs-form:focus{
+
+#input1,#input2,#textarea-footer,.enviar-mensagem{
+    position: relative;
+    right: -200%;
+    transition: right 1s;
+}
+
+#input1:focus,#input2:focus,#textarea-footer:focus{
     border-bottom: solid 1px hsl(153, 71%, 59%);
 }
 
@@ -188,7 +200,7 @@ form{
     font-weight: bold;
 }
 
-.enviar-mensagem:hover,.contate-me-header:hover{
+.enviar-mensagem:hover,.contate-me-header:hover,.links-projeto:hover{
     color: hsl(153, 71%, 59%);
 }
 
@@ -222,7 +234,7 @@ form{
     width: 530px;
     position: absolute;
     right: -239px;
-    top: 1077px;
+    top: 1200px;
 }
 
 .imagem-circulo{
@@ -232,14 +244,35 @@ form{
     top: 521px;
 }
 
-.imagem-zap{
+#imagem-zap{
     width: 27px;
 }
 
-.imagem-email{
+#imagem-email{
  width: 30px;
 }
 
 .links-contato{
     text-decoration: none;
+}
+
+.imagens-links{
+    transition: 0.3s ease-in-out;
+}
+
+.imagens-links:hover{
+    transform: scale(1.5);
+}
+
+.div-hover-projetos{
+    visibility: hidden;
+    position: absolute;
+    width: 540px;
+    height: 303.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    background-color: rgba(0, 0, 0, 60%);
 }
