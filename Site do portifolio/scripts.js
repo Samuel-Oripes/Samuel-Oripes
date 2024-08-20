@@ -1,33 +1,3 @@
-const divHoverVelha = document.querySelector("#div-hover-velha")
-const divHoverCalculadora = document.querySelector("#div-hover-calculadora")
-const divHoverFormulario = document.querySelector("#div-hover-formulario")
-
-function entradaDoMouse(projeto){
-
-    if(projeto == 'velha'){
-        divHoverVelha.style.visibility = "visible"
-    }
-    if(projeto == 'calculadora'){
-        divHoverCalculadora.style.visibility = "visible"
-    }
-    if(projeto == 'formulario'){
-        divHoverFormulario.style.visibility = "visible"
-    }
-}
-
-function saidaDoMouse(projeto){
-
-    if(projeto == 'velha'){
-        divHoverVelha.style.visibility = "hidden"
-    }
-    if(projeto == 'calculadora'){
-        divHoverCalculadora.style.visibility = "hidden"
-    }
-    if(projeto == 'formulario'){
-        divHoverFormulario.style.visibility = "hidden"
-    }
-}
-
 const input1 = document.querySelector("#input1")
 const input2 = document.querySelector("#input2")
 const textarea = document.querySelector("#textarea-footer")
@@ -40,18 +10,18 @@ const animacaoScroll = new IntersectionObserver( (dados) => {
 
         if(dado.isIntersecting === true){
 
-            setInterval(()=>{
+            setTimeout(()=>{
                 input1.style.right = "0px"
             }, 400);
     
-            setInterval(()=>{
+            setTimeout(()=>{
                 input2.style.right = "0px"
             }, 700);
     
-            setInterval(()=>{
+            setTimeout(()=>{
                 textarea.style.right = "0px"
             }, 1000);
-            setInterval(()=>{
+            setTimeout(()=>{
                 enviar.style.right = "0px"
             }, 1300);
         }
@@ -60,31 +30,117 @@ const animacaoScroll = new IntersectionObserver( (dados) => {
 
 animacaoScroll.observe(footer)
 
-const header = document.querySelector(".header")
+const nav = document.querySelector(".nav")
+const html = document.querySelector("#html")
+const css = document.querySelector("#css")
+const js = document.querySelector("#js")
+const resp = document.querySelector("#resp")
 
-const paragrafo = document.querySelector(".sobre-mim-header")
-const texto = ['Sou um programador Front End e logo abaixo você poderá conferir alguns dos meus trabalhos. Sinta-se à vontade para entrar em contato comigo a qualquer momento, seria um prazer trabalhar com você!']
+const textoCss = ['CSS']
+const textoHtml = ['HTML']
+const textoJs = ['JavaScript']
+const textoResp = ['Responsividade']
 
-const animacaoDigitar = new IntersectionObserver( (dados) => {
+const digitarTecnologias = new IntersectionObserver( (dados) => {
 
     dados.forEach((dado) => {
 
         if(dado.isIntersecting === true){
 
-            const digitar = () => {
-                currentMessage = texto[messageIndex]
-                currentCharacters = currentMessage.slice(0, characterIndex++)
-                paragrafo.textContent = currentCharacters
+            if(verificador === true){
+
+                html.style.borderRight = "3px solid hsl(0, 0%, 100%)"
+
+                const digitarHtml = () => {
+                    currentMessage1 = textoHtml[messageIndex1]
+                    currentCharacters1 = currentMessage1.slice(0, characterIndex1++)
+                    html.textContent = currentCharacters1
+                }
+                setInterval(digitarHtml, 100)
+    
+                const borderHtml = () => {
+                    html.style.border = "none"
+                }
+                setTimeout(borderHtml, 900)
+    
+                setTimeout(() => {
+    
+                    css.style.borderRight = "3px solid hsl(0, 0%, 100%)"
+    
+                    const digitarCss = () => {
+                        currentMessage2 = textoCss[messageIndex2]
+                        currentCharacters2 = currentMessage2.slice(0, characterIndex2++)
+                        css.textContent = currentCharacters2
+                    }
+                    setInterval(digitarCss, 100)
+                }, 900);
+                
+                const borderCss = () => {
+                    css.style.border = "none"
+                }
+                setTimeout(borderCss, 1700)
+    
+                setTimeout(() => {
+    
+                    js.style.borderRight = "3px solid hsl(0, 0%, 100%)"
+    
+                    const digitarJs = () => {
+                        currentMessage3 = textoJs[messageIndex3]
+                        currentCharacters3 = currentMessage3.slice(0, characterIndex3++)
+                        js.textContent = currentCharacters3
+                    }
+                    setInterval(digitarJs, 100)
+                }, 1700);
+                
+                const borderJs = () => {
+                    js.style.border = "none"
+                }
+                setTimeout(borderJs, 3200)
+    
+                setTimeout(() => {
+    
+                    resp.style.borderRight = "3px solid hsl(0, 0%, 100%)"
+    
+                    const digitarResp = () => {
+                        currentMessage4 = textoResp[messageIndex4]
+                        currentCharacters4 = currentMessage4.slice(0, characterIndex4++)
+                        resp.textContent = currentCharacters4
+                    }
+                    setInterval(digitarResp, 100)
+                }, 3200);
+                
+                const borderResp = () => {
+                    resp.style.border = "none"
+                }
+                setTimeout(borderResp, 5100)
+    
+                verificador = false
             }
-            setInterval(digitar, 30)
         }
     })
 
 })
 
-let messageIndex = 0
-let characterIndex = 0
-let currentMessage = ""
-let currentCharacters = ""
+let verificador = true
 
-animacaoDigitar.observe(header)
+let messageIndex1 = 0
+let characterIndex1 = 0
+let currentMessage1 = ""
+let currentCharacters1 = ""
+
+let messageIndex2 = 0
+let characterIndex2 = 0
+let currentMessage2 = ""
+let currentCharacters2 = ""
+
+let messageIndex3 = 0
+let characterIndex3 = 0
+let currentMessage3 = ""
+let currentCharacters3 = ""
+
+let messageIndex4 = 0
+let characterIndex4 = 0
+let currentMessage4 = ""
+let currentCharacters4 = ""
+
+digitarTecnologias.observe(nav)

@@ -265,7 +265,6 @@ form{
 }
 
 .div-hover-projetos{
-    visibility: hidden;
     position: absolute;
     width: 540px;
     height: 303.8px;
@@ -275,4 +274,72 @@ form{
     flex-direction: column;
     gap: 60px;
     background-color: rgba(0, 0, 0, 60%);
+
+}
+
+#div-hover-velha, #div-hover-calculadora, #div-hover-formulario{
+    visibility: hidden;
+    transform: scale(0);
+    border-radius: 50%;
+    width: 303.8px;
+    height: 303.8px;
+    transition: 1s;
+}
+
+#div-projeto-velha:hover #div-hover-velha, #div-projeto-formulario:hover #div-hover-formulario, #div-projeto-calculadora:hover #div-hover-calculadora{
+    visibility: visible;
+    width: 540px;
+    height: 303.8px;
+    transform: scale(1);
+    border-radius: 0;
+}
+
+.div-centralizar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+    height: 303.8px;
+}
+
+#html,#css,#js,#resp{
+    padding-right: 2px;
+    display: inline;
+}
+
+@keyframes ampliar {
+    0%{
+        transform: scale(0);
+        border-radius: 50%;
+        width: 303.8px;
+        height: 303.8px;
+    }
+    50%{
+        border-radius: 50%;
+        width: 303.8px;
+        height: 303.8px;
+    }
+    100%{
+        transform: scale(1);
+        border-radius: 0;
+    }
+}
+
+@keyframes reduzir {
+    0%{
+        transform: scale(1);
+        border-radius: 0;
+    }
+    50%{
+        border-radius: 50%;
+        width: 303.8px;
+        height: 303.8px;
+    }
+    100%{
+        transform: scale(0);
+        border-radius: 50%;
+        width: 303.8px;
+        height: 303.8px;
+    }
 }
